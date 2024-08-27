@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade Educa+</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            overflow-x: hidden; /* Previne rolagem horizontal */
+            overflow-y: auto; /* Permite rolagem vertical */
+        }
+        #intro-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #6a1b9a; /* Roxo escuro */
+            z-index: 1000;
+            color: #fff;
+            overflow: hidden;
+        }
+        .fade-in-text {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #fff; /* Branco */
+            opacity: 0;
+            animation: fadeIn 3s forwards, fadeOut 2s 3s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        #cadastro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 1000;
+            position: fixed;
+            width: 100%;
+        }
+        #form-cadastro {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        #form-cadastro h2 {
+            margin-bottom: 20px;
+            color: #6a1b9a; /* Roxo escuro */
+        }
+        #form-cadastro label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        #form-cadastro input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #form-cadastro button {
+            background: #e53935; /* Vermelho */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        #form-cadastro button:hover {
+            background: #c62828; /* Vermelho escuro */
+        }
+        main {
+            display: none;
+            padding: 20px;
+        }
+        header {
+            background: #6a1b9a; /* Roxo escuro */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 999;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            background: #e53935; /* Vermelho */
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #c62828; /* Vermelho escuro */
+        }
+        footer {
+            background: #6a1b9a; /* Roxo escuro */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        footer a {
+            color: #e53935; /* Vermelho */
+            text-decoration: none;
+        }
+        .social-share {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-share a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .social-share a:hover {
+            background: #f1f1f1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .social-share img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animação Inicial -->
+    <div id="intro-animation">
+        <div class="fade-in-text">Acessibilidade</div>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <div id="cadastro">
+        <form id="form-cadastro">
+            <h2>Cadastro</h2>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit" class="btn">Iniciar Curso</button>
+        </form>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <header>
+            <h1>Acessibilidade Educa+</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro-curso">Introdução ao Curso</a></li>
+                    <li><a href="#introducao">Introdução à Libras</a></li>
+                    <li><a href="#alfabeto">Alfabeto e Números</a></li>
+                    <li><a href="#frases">Frases Básicas</a></li>
+                    <li><a href="#conversacao">Conversação Avançada</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="intro-curso">
+            <h2>Introdução ao Curso de Libras</h2>
+            <p>Bem-vindo ao Curso de Libras! A Língua Brasileira de Sinais (Libras) é um dos principais meios de comunicação para a comunidade surda no Brasil. Este curso tem como objetivo proporcionar a você uma compreensão sólida e prática desta língua rica e única, promovendo a inclusão e a comunicação eficaz entre pessoas surdas e ouvintes.</p>
+            <p>A inclusão é um valor essencial em nossa sociedade. Ao aprender Libras, você estará contribuindo para um mundo mais acessível e inclusivo para todos.</p>
+            <a href="#introducao" class="btn">Próxima Fase</a>
+        </section>
+
+        <section id="introducao">
+            <h2>Introdução à Libras</h2>
+            <p>Este módulo cobre a história e a importância da Libras. Você aprenderá sobre as origens da língua, sua estrutura básica e o papel vital que desempenha na comunicação dentro da comunidade surda.</p>
+            <a href="https://youtu.be/your-introduction-video" class="btn" target="_blank" aria-label="Assista ao Vídeo de Introdução à Libras">Assista ao Vídeo de Introdução</a>
+            <p>Direitos autorais: Academia de Libras</p>
+            <a href="#alfabeto" class="btn">Próxima Fase</a>
+        </section>
+
+        <section id="alfabeto">
+            <h2>Alfabeto e Números em Libras</h2>
+            <p>Aprender o alfabeto e os números em Libras é fundamental para a comunicação básica. Este módulo fornece uma visão abrangente de como os sinais são feitos e usados para formar palavras e números.</p>
+            <a href="https://youtu.be/your-alphabet-numbers-video" class="btn" target="_blank" aria-label="Assista ao Vídeo do Alfabeto e Números">Assista ao Vídeo do Alfabeto e Números</a>
+            <p>Direitos autorais: Biblioteca de Libras</p>
+            <a href="#frases" class="btn">Próxima Fase</a>
+        </section>
+
+        <section id="frases">
+            <h2>Frases Básicas em Libras</h2>
+            <p>Aprender frases básicas em Libras permitirá que você se comunique de forma simples e eficaz. Este módulo cobre as expressões e frases mais comuns usadas no cotidiano.</p>
+            <a href="https://youtu.be/your-basic-phrases-video" class="btn" target="_blank" aria-label="Assista ao Vídeo de Frases Básicas">Assista ao Vídeo de Frases Básicas</a>
+            <p>Direitos autorais: Academia de Libras</p>
+            <a href="#conversacao" class="btn">Próxima Fase</a>
+        </section>
+
+        <section id="conversacao">
+            <h2>Conversação Avançada em Libras</h2>
+            <p>Este módulo é dedicado ao aprimoramento das habilidades de conversação em Libras. Aprenda a participar de discussões mais complexas e a expressar pensamentos e ideias com mais precisão.</p>
+            <a href="https://youtu.be/your-advanced-conversation-video" class="btn" target="_blank" aria-label="Assista ao Vídeo de Demonstração 1">Vídeo de Demonstração 1</a>
+            <a href="https://youtu.be/your-advanced-conversation-video" class="btn" target="_blank" aria-label="Vídeo de Demonstração 2">Vídeo de Demonstração 2</a>
+            <a href="https://youtu.be/your-advanced-conversation-video" class="btn" target="_blank" aria-label="Vídeo de Demonstração 3">Vídeo de Demonstração 3</a>
+            <p>Direitos autorais: Neto Libras / Academia de Libras</p>
+            <a href="#conclusao" class="btn">Próxima Fase</a>
+        </section>
+
+        <section id="conclusao">
+            <h2>Conclusão do Curso</h2>
+            <p>Parabéns por concluir o curso de Libras! Aqui está um resumo do que você aprendeu e o que pode fazer a seguir para continuar sua jornada de aprendizado.</p>
+            <h3>O Que Você Conquistou:</h3>
+            <ul>
+                <li>Compreensão do Alfabeto e Números</li>
+                <li>Desenvolvimento de Frases Básicas</li>
+                <li>Participação em Conversações Avançadas</li>
+            </ul>
+            <h3>Próximos Passos:</h3>
+            <ul>
+                <li>Pratique Regularmente</li>
+                <li>Explore Recursos Adicionais</li>
+                <li>Participe de Eventos e Comunidades</li>
+            </ul>
+            <div class="social-share">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank" title="Compartilhar no Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Confira%20este%20curso%20sobre%20Libras!" target="_blank" title="Compartilhar no Twitter">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+                </a>
+                <a href="https://api.whatsapp.com/send?text=Confira%20este%20curso%20sobre%20Libras:%20YOUR_URL" target="_blank" title="Compartilhar no WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="#" class="copy-link" onclick="copiarLink()">Copiar Link</a>
+            </div>
+            <a href="#intro-curso" class="btn">Voltar ao Início</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Acessibilidade Educa+</p>
+        <a href="https://www.instagram.com/acessibilidademais" target="_blank" aria-label="Instagram da Acessibilidade Educa+">Instagram</a>
+    </footer>
+
+    <script>
+        // Função para ocultar a animação e mostrar o conteúdo principal
+        function hideIntroAnimation() {
+            document.getElementById('intro-animation').style.display = 'none';
+            document.getElementById('cadastro').style.display = 'none';
+            document.querySelector('main').style.display = 'block';
+        }
+
+        // Função para copiar o link
+        function copiarLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copiado para a área de transferência!');
+            });
+        }
+
+        // Ocultar a animação e o formulário após o cadastro
+        document.getElementById('form-cadastro').addEventListener('submit', function(event) {
+            event.preventDefault();
+            hideIntroAnimation();
+        });
+
+        // Mostrar o formulário de cadastro ao iniciar o site
+        window.addEventListener('load', function() {
+            document.getElementById('cadastro').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
